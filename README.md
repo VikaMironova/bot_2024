@@ -10,6 +10,6 @@
 
 Использую:
 
-Python 3.12;
-FastAPI;
-PostgreSQL;
+    1) Python 3.12;
+    2) FastAPI;
+    3) PostgreSQL;
