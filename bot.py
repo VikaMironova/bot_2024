@@ -5,6 +5,8 @@ import httpx
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 import uvicorn
+from decouple import config
+from config import BOT_TOKEN
 
 # Инициализация FastAPI приложения
 fastapi_app = FastAPI()
@@ -64,7 +66,7 @@ async def get_trees(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         await update.message.reply_text("Произошла ошибка при получении данных.")
 
 def run_telegram_bot():
-    telegram_app = ApplicationBuilder().token("7755609168:AAEHwYG4KVZ30uqoUWcmX5yXSwUx_Al5dHM").build()  # Замените токен
+    telegram_app = ApplicationBuilder().token(BOT_TOKEN).build()  # Замените токен
     telegram_app.add_handler(CommandHandler("start", start))
     telegram_app.add_handler(CommandHandler("trees", get_trees))
 

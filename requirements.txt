@@ -3,3 +3,4 @@ httpx~=0.28.1
 beautifulsoup4~=4.12.3
 python-telegram-bot~=21.9
 uvicorn~=0.32.1
+python-decouple~=3.8

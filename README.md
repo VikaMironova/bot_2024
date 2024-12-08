@@ -4,3 +4,5 @@
 
 1) Python 3.10;
 2) FastAPI;
+
+
